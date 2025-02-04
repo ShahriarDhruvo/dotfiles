@@ -1,9 +1,10 @@
 #!/bin/bash
 
-file_path="/"
+install_date=$(rpm -qi basesystem | grep "Install Date" | awk -F': ' '{print $2}')
+install_time=$(date -d "$install_date" +%s)
+
 current_time=$(date +%s)
-file_time=$(stat -c %Y "$file_path")
-time_difference=$((current_time - file_time))
+time_difference=$((current_time - install_time))
 
 years=$((time_difference / 31536000))
 months=$(((time_difference % 31536000) / 2628000))
