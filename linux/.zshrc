@@ -73,3 +73,6 @@ compinit
 
 # Execute fastfetch command at terminal start
 fastfetch
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/user0/.lmstudio/bin"

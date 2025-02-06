@@ -1,6 +1,6 @@
-theme=rose-pine
+theme=catppuccin-frappe
 background=#000000
-#background-opacity=0.8
+background-opacity=0.95
 background-blur-radius=20
 
 font-family=JetBrainsMonoNL Nerd Font
@@ -16,7 +16,7 @@ shell-integration-features=no-cursor
 window-width = 4096
 window-height = 4096
 
-#window-decoration=false
+gtk-titlebar=false
 window-padding-x=10
 window-padding-y=10
 window-padding-balance=true
