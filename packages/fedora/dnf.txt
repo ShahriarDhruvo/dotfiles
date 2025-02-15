@@ -7,3 +7,4 @@ waybar
 fontawesome-fonts
 wofi
 SwayNotificationCenter
+nwg-look
