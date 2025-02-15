@@ -1,0 +1,9 @@
+hypridle
+hyprland
+hyprlock
+hyprshot
+kitty
+waybar
+fontawesome-fonts
+wofi
+SwayNotificationCenter
