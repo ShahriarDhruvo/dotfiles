@@ -8,3 +8,4 @@ fontawesome-fonts
 wofi
 SwayNotificationCenter
 nwg-look
+wlogout
