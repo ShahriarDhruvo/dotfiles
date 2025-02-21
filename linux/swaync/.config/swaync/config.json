@@ -32,12 +32,7 @@
   "hide-on-action": true,
   "script-fail-notify": true,
 
-  "widgets": [
-    "inhibitors",
-    "dnd",
-    "mpris",
-    "notifications"
-  ],
+  "widgets": ["inhibitors", "dnd", "mpris", "notifications"],
   "widget-config": {
     "inhibitors": {
       "text": "Inhibitors",
@@ -49,16 +44,8 @@
       "clear-all-button": false,
       "button-text": "Clear All"
     },
-    "dnd": {
-      "text": "Do Not Disturb"
-    },
-    "label": {
-      "max-lines": 5,
-      "text": "Label Text"
-    },
-    "mpris": {
-      "image-size": 96,
-      "blur": true
-    }
+    "dnd": { "text": "Do Not Disturb" },
+    "label": { "max-lines": 5, "text": "Label Text" },
+    "mpris": { "image-size": 96, "blur": true }
   }
 }
