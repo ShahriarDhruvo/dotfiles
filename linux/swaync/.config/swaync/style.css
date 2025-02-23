@@ -375,9 +375,14 @@ slider {
   border: 1px solid #6c7086;
 }
 
+.widget-mpris {
+  margin-top: 1.2rem;
+}
+
 .widget-mpris .widget-mpris-player {
   background: #313244;
   padding: 7px;
+  border: 1px solid #6c7086;
 }
 
 .widget-mpris .widget-mpris-title {
