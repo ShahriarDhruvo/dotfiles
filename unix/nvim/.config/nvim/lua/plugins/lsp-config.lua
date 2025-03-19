@@ -1,20 +1,28 @@
 return {
 	{
-		"williamboman/mason.nvim",
-		lazy = false,
-		config = function()
-			require("mason").setup()
-		end,
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		lazy = false,
-		opts = {
-			auto_install = true,
-		},
+		"folke/lazydev.nvim",
+		ft = "lua",
+		opts = { library = { { path = "${3rd}/luv/library", words = { "vim%.uv" } } } },
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			{
+				"williamboman/mason.nvim",
+				lazy = false,
+				config = function()
+					require("mason").setup()
+				end,
+			},
+			{
+				"williamboman/mason-lspconfig.nvim",
+				lazy = false,
+				opts = { auto_install = true },
+			},
+			{ "j-hui/fidget.nvim", opts = {} },
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			"hrsh7th/cmp-nvim-lsp",
+		},
 		lazy = false,
 		config = function()
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
