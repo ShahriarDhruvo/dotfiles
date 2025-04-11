@@ -19,4 +19,4 @@
     cycle through misspelled words.
 12. '\<leader>|' and '\<leader>-' to split and ctrl-h/j/k/l to navigate and
     ctrl+up/down/left/right to adjust the buffer size.
-13.
+13. '^' to go to the first non-blank character of a line.

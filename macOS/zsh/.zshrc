@@ -157,7 +157,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Execute fastfetch command at terminal start
-fastfetch
+# fastfetch
 
 # ZSH History
 HISTFILE=$HOME/.zsh_history
