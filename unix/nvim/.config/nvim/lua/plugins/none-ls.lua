@@ -2,9 +2,14 @@ return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {
 		"nvimtools/none-ls-extras.nvim",
+		"williamboman/mason.nvim",
 	},
 	config = function()
 		local null_ls = require("null-ls")
+
+		-- Ensure mason binaries are in path
+    local mason_bin = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/bin/")
+    vim.env.PATH = mason_bin .. ":" .. vim.env.PATH
 
 		null_ls.setup({
 			sources = {
@@ -20,10 +25,15 @@ return {
 
 				-- Diagnostics
 				null_ls.builtins.diagnostics.codespell, -- spell checking across many file types.
-				require("none-ls.diagnostics.eslint"), -- JavaScript, TypeScript
+				-- require("none-ls.diagnostics.eslint"), -- JavaScript, TypeScript
+				null_ls.builtins.diagnostics.eslint_d, -- JavaScript, TypeScript
+				null_ls.builtins.diagnostics.flake8, -- Python
+				null_ls.builtins.diagnostics.mypy, -- Python
+				null_ls.builtins.diagnostics.shellcheck, -- Shell scripts
+				null_ls.builtins.diagnostics.write_good, -- English grammar
 			},
 		})
 
-		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format code" })
 	end,
 }
